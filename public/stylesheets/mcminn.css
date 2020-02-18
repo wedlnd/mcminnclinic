@@ -8,13 +8,15 @@
 
 .logo {
     padding-bottom: 5px;
+    order: -2;
 }
 
 .cta-contact {
-    padding-bottom: 5px;
+    padding-bottom: 8px;
+    order: -1;
 }
 
-/* Effect 3: bottom line slides/fades in */
+/* NavBar hover effect: bottom line slides/fades in */
 .cl-effect-3 a {
 	padding: 5px 5px;
 }
@@ -43,11 +45,6 @@
 	-moz-transform: translateY(0px);
 	transform: translateY(0px);
 }
-
-
-
-
-
 
 
 * {
@@ -155,7 +152,8 @@ body {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .page-footer {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row;
+  justify-content: space-between;
   background: var(--main-white-color);
 }
 
