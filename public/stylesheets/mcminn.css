@@ -9,30 +9,15 @@ html {
     overflow-y: scroll;
 }
 
+.navbar-brand {
+  padding-bottom: 8px;
+}
 
 :root {
   --main-white-color: #f2f2f2;
   --main-black-color: black;
   --main-green-color: green;
 }
-
-.logo {
-    padding-bottom: 5px;
-    order: -2;
-}
-
-.cta-contact {
-    padding-bottom: 8px;
-    order: -1;
-}
-
-
-/* NavBar padding to text
-------------------------- */
-.cl-effect-3 a {
-  padding: 5px 5px;
-} 
-
 
 
 /* SETUP for ANIMATIONS 
@@ -44,11 +29,6 @@ html {
   box-sizing: border-box;
 }
 
-button {
-  background: none;
-  outline: none;
-  cursor: pointer;
-}
 
 ul {
   list-style: none;
@@ -79,90 +59,20 @@ body {
 }
 
 
-/* HEADER
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.page-header {
-  background: var(--main-white-color);
-}
-.page-header nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.page-header ul {
-  display: flex;
-  order: 1;
-  width: 100%;
-  margin-top: 15px;
-}
-
-.page-header ul li:not(:last-child) {
-  padding-right: 15px;
-}
-
-.page-header .cta-contact {
-  font-family: inherit;
-  font-size: 1.2rem;
-  padding: 5px 18px;
-  border: 1px solid;
-  border-radius: 5px;
-}
-
-@media screen and (min-width: 550px) {
-    .page-header ul {
-      width: auto;
-      margin-top: 0;
-    }
-  
-    .page-header .cta-contact {
-      order: 1;
-    }
-  
-    .page-footer {
+  /* footer pre-animation
+  ---------------------------- */
+.page-footer {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-    }
+}
   
     .page-footer ul {
       margin-bottom: 0;
     }
-  }
   
-
-
-/* HEADER with landing animation
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.page-header-lp {
-    background: var(--main-white-color);
-  }
-  .page-header-lp nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .page-header-lp ul {
-    display: flex;
-    order: 1;
-    width: 100%;
-    margin-top: 15px;
-  }
-  
-  .page-header-lp ul li:not(:last-child) {
-    padding-right: 15px;
-  }
-  
-  .page-header-lp .cta-contact {
-    font-family: inherit;
-    font-size: 1.2rem;
-    padding: 5px 18px;
-    border: 1px solid;
-    border-radius: 5px;
-  }
+ 
   
 
 
@@ -177,23 +87,6 @@ body {
   background-color: white;
 }
 
-/* @media screen and (min-width: 640px) {
-    body {
-      font-size: 18px;
-    }
-
-    .flex-container {
-        display: flex;
-    }
-  
-    .page-main {
-      padding-left: 90px;
-    }
-  }
-
-.main-content {
-    flex: 1;
-} */
 
 /* MAIN landing w/animation
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -214,7 +107,7 @@ body {
 }
 
 .page-main-lp h1 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .page-main-lp p + p {
@@ -264,15 +157,6 @@ body {
 /* MQ
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media screen and (min-width: 550px) {
-  .page-header-lp ul {
-    width: auto;
-    margin-top: 0;
-  }
-
-  .page-header-lp .cta-contact {
-    order: 1;
-  }
-
   .page-footer-lp {
     flex-direction: row;
     justify-content: space-between;
@@ -296,41 +180,21 @@ body {
 
 /* ANIMATIONS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.page-header-lp nav > *,
 .page-main-lp,
 .page-footer-lp > * {
   opacity: 0;
 }
 
-.page-header-lp,
 .page-footer-lp,
 .page-main-lp .text-wrapper {
   overflow: hidden;
 }
 
-.page-header-lp nav > * {
-  transform: translateY(-30px);
-}
 
 .page-footer-lp > * {
   transform: translateY(30px);
 }
 
-.page-header-lp {
-  position: relative;
-}
-
-.page-header-lp::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--main-green-color);
-  z-index: 99999;
-  transform: scaleX(0);
-}
 
 .page-main-lp .text-wrapper + .text-wrapper {
   margin-top: 10px;
@@ -344,23 +208,16 @@ body {
   transform: translateY(-120%);
 }
 
-.loaded .page-header-lp::after {
-  animation: scaleIn 1s ease-in 0.2s forwards;
-}
-
 .loaded .page-main-lp {
-  animation: fadeIn 1s ease-in 0.7s forwards;
+  animation: fadeIn 0.5s ease-in 0s forwards;
 }
-
-.loaded .page-header-lp nav > *,
+.loaded .navbar nav > *,
 .loaded .page-footer-lp > * {
-  animation: fadeIn 1s ease-in 0.7s forwards, slideIn 0.8s ease-in 0.9s forwards;
+  animation: fadeIn 1s ease-in 0s forwards, slideIn 0.5s ease-in 0.5s forwards;
 }
-
 .loaded .page-main-lp .text-wrapper * {
-  animation: slideIn 0.6s cubic-bezier(0.54, 0.46, 0.54, 0.94) 2s forwards;
+  animation: slideIn 0.5s cubic-bezier(0.54, 0.46, 0.54, 0.94) 0.5s forwards;
 }
-
 @keyframes fadeIn {
   60% {
     opacity: 0;

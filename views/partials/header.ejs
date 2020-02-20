@@ -9,17 +9,34 @@
   <script src="https://kit.fontawesome.com/54f80597fc.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="page-header">
-      <nav>
-        <h2 class="logo">McMinn Clinic</h2>
-        <nav class="cl-effect-3">
-            <a href="/about">About</a>
-            <a href="/events.ejs">Events</a>
-            <a href="/currentpt.ejs">Current Patients</a>
-            <a href="/newpt.ejs">New Patients</a>
-        </nav>
-        <button class="cta-contact">Contact Us</button>
+    <div class="wrapper">
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand mb-0 h1" href="/">
+        McMinn Clinic
+      </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="about">About<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Events</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Patient Information
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Current Patients</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">New Patients</a>
+              </div>
+            </ul>
+            <form class="form-inline">
+              <button class="btn btn-outline-success my-2 my-sm-0" href="contact">Contact Us</button>
+            </form>
       </nav>
-    </header>
-    <main class="page-main">
