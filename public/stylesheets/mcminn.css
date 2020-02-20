@@ -1,4 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
+body {
+  font-family: 'Oswald', sans-serif;
+} 
+
+
+html {
+    overflow-y: scroll;
+}
+
 
 :root {
   --main-white-color: #f2f2f2;
@@ -16,36 +26,17 @@
     order: -1;
 }
 
-/* NavBar hover effect: bottom line slides/fades in */
+
+/* NavBar padding to text
+------------------------- */
 .cl-effect-3 a {
-	padding: 5px 5px;
-}
+  padding: 5px 5px;
+} 
 
-.cl-effect-3 a::after {
-	position: absolute;
-	top: 100%;
-	left: 0;
-	width: 100%;
-	height: 4px;
-	background: rgba(0,0,0,0.1);
-	content: '';
-	opacity: 0;
-	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
-	transition: opacity 0.3s, transform 0.3s;
-	-webkit-transform: translateY(10px);
-	-moz-transform: translateY(10px);
-	transform: translateY(10px);
-}
 
-.cl-effect-3 a:hover::after,
-.cl-effect-3 a:focus::after {
-	opacity: 1;
-	-webkit-transform: translateY(0px);
-	-moz-transform: translateY(0px);
-	transform: translateY(0px);
-}
 
+/* SETUP for ANIMATIONS 
+=---------------------------*/
 
 * {
   padding: 0;
@@ -69,7 +60,7 @@ a {
 }
 
 body {
-  font: 16px/1.5 "Montserrat", sans-serif;
+  font: 16px/1.5 "Oswald", sans-serif;
   /*IE FIX*/
   /*display: flex;
   flex-direction: column;*/
@@ -119,10 +110,94 @@ body {
   border-radius: 5px;
 }
 
+@media screen and (min-width: 550px) {
+    .page-header ul {
+      width: auto;
+      margin-top: 0;
+    }
+  
+    .page-header .cta-contact {
+      order: 1;
+    }
+  
+    .page-footer {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .page-footer ul {
+      margin-bottom: 0;
+    }
+  }
+  
 
-/* MAIN
+
+/* HEADER with landing animation
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-header-lp {
+    background: var(--main-white-color);
+  }
+  .page-header-lp nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .page-header-lp ul {
+    display: flex;
+    order: 1;
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  .page-header-lp ul li:not(:last-child) {
+    padding-right: 15px;
+  }
+  
+  .page-header-lp .cta-contact {
+    font-family: inherit;
+    font-size: 1.2rem;
+    padding: 5px 18px;
+    border: 1px solid;
+    border-radius: 5px;
+  }
+  
+
+
+/* MAIN portion not landing
+------------------------------------- */
 .page-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  min-height: 350px;
+  background-color: white;
+}
+
+/* @media screen and (min-width: 640px) {
+    body {
+      font-size: 18px;
+    }
+
+    .flex-container {
+        display: flex;
+    }
+  
+    .page-main {
+      padding-left: 90px;
+    }
+  }
+
+.main-content {
+    flex: 1;
+} */
+
+/* MAIN landing w/animation
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-main-lp {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -131,19 +206,18 @@ body {
   background:
     url(/images/jachan-devol-xY_6ZENqcfo-unsplash.jpg) no-repeat
     center / cover;
-  background-blend-mode: luminosity;
   color: var(--main-white-color);
 }
 
-.page-main div {
+.page-main-lp div {
   max-width: 500px;
 }
 
-.page-main h1 {
+.page-main-lp h1 {
   margin-bottom: 20px;
 }
 
-.page-main p + p {
+.page-main-lp p + p {
   margin-top: 10px;
 }
 
@@ -167,26 +241,45 @@ body {
   margin-right: 20px;
 }
 
+/* FOOTER with landing page animation
+---------------------------------------- */
+.page-footer-lp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: var(--main-white-color);
+  }
+  
+  .page-footer-lp ul {
+    display: flex;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  
+  .page-footer-lp ul li:not(:last-child) {
+    margin-right: 20px;
+  }
+  
 
 /* MQ
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media screen and (min-width: 550px) {
-  .page-header ul {
+  .page-header-lp ul {
     width: auto;
     margin-top: 0;
   }
 
-  .page-header .cta-contact {
+  .page-header-lp .cta-contact {
     order: 1;
   }
 
-  .page-footer {
+  .page-footer-lp {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
 
-  .page-footer ul {
+  .page-footer-lp ul {
     margin-bottom: 0;
   }
 }
@@ -196,38 +289,38 @@ body {
     font-size: 18px;
   }
 
-  .page-main {
+  .page-main-lp {
     padding-left: 90px;
   }
 }
 
 /* ANIMATIONS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.page-header nav > *,
-.page-main,
-.page-footer > * {
+.page-header-lp nav > *,
+.page-main-lp,
+.page-footer-lp > * {
   opacity: 0;
 }
 
-.page-header,
-.page-footer,
-.page-main .text-wrapper {
+.page-header-lp,
+.page-footer-lp,
+.page-main-lp .text-wrapper {
   overflow: hidden;
 }
 
-.page-header nav > * {
+.page-header-lp nav > * {
   transform: translateY(-30px);
 }
 
-.page-footer > * {
+.page-footer-lp > * {
   transform: translateY(30px);
 }
 
-.page-header {
+.page-header-lp {
   position: relative;
 }
 
-.page-header::after {
+.page-header-lp::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -239,32 +332,32 @@ body {
   transform: scaleX(0);
 }
 
-.page-main .text-wrapper + .text-wrapper {
+.page-main-lp .text-wrapper + .text-wrapper {
   margin-top: 10px;
 }
 
-.page-main .text-wrapper * {
+.page-main-lp .text-wrapper * {
   transform: translateY(120%);
 }
 
-.page-main .p-wrapper * {
+.page-main-lp .p-wrapper * {
   transform: translateY(-120%);
 }
 
-.loaded .page-header::after {
+.loaded .page-header-lp::after {
   animation: scaleIn 1s ease-in 0.2s forwards;
 }
 
-.loaded .page-main {
+.loaded .page-main-lp {
   animation: fadeIn 1s ease-in 0.7s forwards;
 }
 
-.loaded .page-header nav > *,
-.loaded .page-footer > * {
+.loaded .page-header-lp nav > *,
+.loaded .page-footer-lp > * {
   animation: fadeIn 1s ease-in 0.7s forwards, slideIn 0.8s ease-in 0.9s forwards;
 }
 
-.loaded .page-main .text-wrapper * {
+.loaded .page-main-lp .text-wrapper * {
   animation: slideIn 0.6s cubic-bezier(0.54, 0.46, 0.54, 0.94) 2s forwards;
 }
 
