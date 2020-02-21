@@ -13,6 +13,22 @@ html {
   padding-bottom: 8px;
 }
 
+.page-footer-lp a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.page-footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#contact-h1 {
+  text-align: center;
+}
+
+
+
 :root {
   --main-white-color: #f2f2f2;
   --main-black-color: black;
@@ -34,10 +50,6 @@ ul {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
 
 body {
   font: 16px/1.5 "Oswald", sans-serif;
