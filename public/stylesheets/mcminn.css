@@ -1,256 +1,236 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
 
 body {
-  font-family: 'Oswald', sans-serif;
-} 
-
+	font-family: 'Oswald', sans-serif;
+}
 
 html {
-    overflow-y: scroll;
+	overflow-y: scroll;
 }
 
 .navbar-brand {
-  padding-bottom: 8px;
+	padding-bottom: 8px;
 }
 
 .page-footer-lp a {
-  text-decoration: none;
-  color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
 .page-footer a {
-  text-decoration: none;
-  color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
 #contact-h1 {
-  text-align: center;
+	text-align: center;
 }
-
-
 
 :root {
-  --main-white-color: #f2f2f2;
-  --main-black-color: black;
-  --main-green-color: green;
+	--main-white-color: #f2f2f2;
+	--main-black-color: black;
+	--main-green-color: green;
 }
-
 
 /* SETUP for ANIMATIONS 
 =---------------------------*/
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
-
 
 ul {
-  list-style: none;
+	list-style: none;
 }
 
-
 body {
-  font: 16px/1.5 "Oswald", sans-serif;
-  /*IE FIX*/
-  /*display: flex;
+	font: 16px/1.5 "Oswald", sans-serif;
+	/*IE FIX*/
+	/*display: flex;
   flex-direction: column;*/
 }
 
 /* CONTAINER
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 .wrapper > * {
-  padding: 20px;
+	padding: 20px;
 }
 
-
-
-  /* footer pre-animation
+/* footer pre-animation
   ---------------------------- */
 .page-footer {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	flex: 0;
 }
-  
-    .page-footer ul {
-      margin-bottom: 0;
-    }
-  
- 
-  
 
+.page-footer ul {
+	margin-bottom: 0;
+}
 
 /* MAIN portion not landing
 ------------------------------------- */
 .page-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-grow: 1;
-  min-height: 350px;
-  background-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-grow: 1;
+	min-height: 350px;
+	background-color: white;
+	flex: 1;
 }
-
 
 /* MAIN landing w/animation
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .page-main-lp {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-grow: 1;
-  min-height: 350px;
-  background:
-    url(/images/jachan-devol-xY_6ZENqcfo-unsplash.jpg) no-repeat
-    center / cover;
-  color: var(--main-white-color);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-grow: 1;
+	min-height: 350px;
+	background: url(/images/jachan-devol-xY_6ZENqcfo-unsplash.jpg) no-repeat center / cover;
+	color: var(--main-white-color);
 }
 
 .page-main-lp div {
-  max-width: 500px;
+	max-width: 500px;
 }
 
 .page-main-lp h1 {
-  margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .page-main-lp p + p {
-  margin-top: 10px;
+	margin-top: 10px;
 }
-
 
 /* FOOTER
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .page-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background: var(--main-white-color);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background: var(--main-white-color);
 }
 
 .page-footer ul {
-  display: flex;
-  font-size: 1.5rem;
-  margin-bottom: 5px;
+	display: flex;
+	font-size: 1.5rem;
+	margin-bottom: 5px;
 }
 
 .page-footer ul li:not(:last-child) {
-  margin-right: 20px;
+	margin-right: 20px;
 }
 
 /* FOOTER with landing page animation
 ---------------------------------------- */
 .page-footer-lp {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background: var(--main-white-color);
-  }
-  
-  .page-footer-lp ul {
-    display: flex;
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-  }
-  
-  .page-footer-lp ul li:not(:last-child) {
-    margin-right: 20px;
-  }
-  
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background: var(--main-white-color);
+}
+
+.page-footer-lp ul {
+	display: flex;
+	font-size: 1.5rem;
+	margin-bottom: 5px;
+}
+
+.page-footer-lp ul li:not(:last-child) {
+	margin-right: 20px;
+}
 
 /* MQ
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media screen and (min-width: 550px) {
-  .page-footer-lp {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
+	.page-footer-lp {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
 
-  .page-footer-lp ul {
-    margin-bottom: 0;
-  }
+	.page-footer-lp ul {
+		margin-bottom: 0;
+	}
 }
 
 @media screen and (min-width: 768px) {
-  body {
-    font-size: 18px;
-  }
+	body {
+		font-size: 18px;
+	}
 
-  .page-main-lp {
-    padding-left: 90px;
-  }
+	.page-main-lp {
+		padding-left: 90px;
+	}
 }
 
 /* ANIMATIONS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .page-main-lp,
 .page-footer-lp > * {
-  opacity: 0;
+	opacity: 0;
 }
 
 .page-footer-lp,
 .page-main-lp .text-wrapper {
-  overflow: hidden;
+	overflow: hidden;
 }
-
 
 .page-footer-lp > * {
-  transform: translateY(30px);
+	transform: translateY(30px);
 }
 
-
 .page-main-lp .text-wrapper + .text-wrapper {
-  margin-top: 10px;
+	margin-top: 10px;
 }
 
 .page-main-lp .text-wrapper * {
-  transform: translateY(120%);
+	transform: translateY(120%);
 }
 
 .page-main-lp .p-wrapper * {
-  transform: translateY(-120%);
+	transform: translateY(-120%);
 }
 
 .loaded .page-main-lp {
-  animation: fadeIn 0.5s ease-in 0s forwards;
+	animation: fadeIn 0.5s ease-in 0s forwards;
 }
 .loaded .navbar nav > *,
 .loaded .page-footer-lp > * {
-  animation: fadeIn 1s ease-in 0s forwards, slideIn 0.5s ease-in 0.5s forwards;
+	animation: fadeIn 1s ease-in 0s forwards, slideIn 0.5s ease-in 0.5s forwards;
 }
 .loaded .page-main-lp .text-wrapper * {
-  animation: slideIn 0.5s cubic-bezier(0.54, 0.46, 0.54, 0.94) 0.5s forwards;
+	animation: slideIn 0.5s cubic-bezier(0.54, 0.46, 0.54, 0.94) 0.5s forwards;
 }
 @keyframes fadeIn {
-  60% {
-    opacity: 0;
-  }
+	60% {
+		opacity: 0;
+	}
 
-  100% {
-    opacity: 1;
-  }
+	100% {
+		opacity: 1;
+	}
 }
 
 @keyframes scaleIn {
-  100% {
-    transform: scaleX(1);
-  }
+	100% {
+		transform: scaleX(1);
+	}
 }
 
 @keyframes slideIn {
-  100% {
-    transform: translateY(0);
-  }
+	100% {
+		transform: translateY(0);
+	}
 }
-
-
-
