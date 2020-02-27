@@ -31,6 +31,6 @@ app.get('/contact', function(req, res) {
 	res.render('contact');
 });
 
-app.listen(3000, function(req, res) {
+app.listen(PORT, function() {
 	console.log('Server has started');
 });
