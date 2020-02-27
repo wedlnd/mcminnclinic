@@ -12,12 +12,12 @@
             <p>You can request appointments through your portal, but you will still need labwork prior to your visit for regular follow-ups.</p>
             <p>If you are scheduling pellets or have a separate appointment to discuss, please call the office before entering an appointment time.</p>
       </div>
-      <div class="card col-4" style="height: 14rem;">
+      <div class="card col-lg-4" style="height: 16rem;">
         <div class="card-body">
           <h5 class="card-title">Charm EHR</h5>
           <h6 class="card-subtitle mb-2 text-muted">Your Patient Portal</h6>
           <p class="card-text">You can follow the link below to sign in to your portal if you are signed up through our front office.</p>
-          <div  style="float:left; margin:0;"> <a href="https://phr.charmtracker.com/login.sas?FACILITY_ID=26be8a8be0b38c0d84d24f06183719a5ec9182d4dbabec212e62fe42203ae47d7c54d4b9c6616d57" target="_blank" class="btn btn-small btn-success pull-right" style="  text-decoration:none;background-color: #5BB75B;
+          <div  style="float:left; margin:0;"> <a href="https://phr.charmtracker.com/login.sas?FACILITY_ID=26be8a8be0b38c0d84d24f06183719a5ec9182d4dbabec212e62fe42203ae47d7c54d4b9c6616d57" target="_blank" class="btn btn-small btn-success float-right" style="  text-decoration:none;background-color: #5BB75B;
             background: #62c462; /* Old browsers */
          /* IE9 SVG, needs conditional override of 'filter' to 'none' */
          
@@ -43,6 +43,34 @@
              text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
              font-size:11px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
              padding: 5px 6px; border-radius: 4px 4px 4px 4px; border:#448944 solid 1px; cursor:pointer">Patient Portal</a> </div> 
+        </div>
+      </div>
+      <div class="card col-lg-4" style="height: 16rem;">
+        <div class="card-body">
+          <h5 class="card-title">Patient Payment Plan</h5>
+          <h6 class="card-subtitle mb-2 text-muted">We have set up our payment system through PayPal</h6>
+          <p class="card-text">Click on this button in order to be linked to PayPal</p>
+
+          <div id="paypal-button-container"></div>
+            <script src="https://www.paypal.com/sdk/js?client-id=AYIKX_jqamsBTXJEPznm1TZapOfibbGpdIlMhvlorAA8Jcz4Z98W9KtkLelykgiqPQpvbWl5PYNErjUs&vault=true" data-sdk-integration-source="button-factory"></script>
+            <script>
+              paypal.Buttons({
+                style: {
+                shape: 'pill',
+                color: 'blue',
+                layout: 'vertical',
+                label: 'paypal',
+                },
+                createSubscription: function(data, actions) {
+                  return actions.subscription.create({
+                  'plan_id': 'P-3K540166KH7907446LZL64ZY'
+                  });
+                },
+                onApprove: function(data, actions) {
+                  alert(data.subscriptionID);
+                }
+              }).render('#paypal-button-container');
+            </script>
         </div>
       </div>
     </div>
