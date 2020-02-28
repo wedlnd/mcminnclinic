@@ -1,7 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
 
+:root {
+	--main-white-color: #f2f2f2;
+	--main-black-color: black;
+	--main-green-color: green;
+}
+
+/* SETUP for ANIMATIONS & MISC Fixes
+=---------------------------*/
 * {
 	font-family: 'Oswald', sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 html {
@@ -28,21 +39,6 @@ html {
 
 #contact-h1 {
 	text-align: center;
-}
-
-:root {
-	--main-white-color: #f2f2f2;
-	--main-black-color: black;
-	--main-green-color: green;
-}
-
-/* SETUP for ANIMATIONS 
-=---------------------------*/
-
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
 }
 
 ul {
