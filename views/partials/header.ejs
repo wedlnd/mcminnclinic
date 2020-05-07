@@ -20,9 +20,18 @@
     
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="about">About<span class="sr-only">(current)</span></a>
-            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="about">Who We Are</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="FAQ">FAQ</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="affiliates">Affiliates</a>
+              </div>
+              </li>
             <li class="nav-item">
               <a class="nav-link" href="podcast">Podcast</a>
             </li>
@@ -35,6 +44,7 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="newpatient">New Patients</a>
               </div>
+              </li>
             </ul>
             <form class="form-inline">
               <a href="contact" class="btn btn-outline-success my-2 my-sm-0">Contact Us</a>

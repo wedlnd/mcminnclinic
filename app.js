@@ -31,6 +31,14 @@ app.get('/contact', function(req, res) {
 	res.render('contact');
 });
 
+app.get('/FAQ', function(req, res) {
+	res.render('FAQ');
+});
+
+app.get('/affiliates', function(req, res) {
+	res.render('affiliates');
+});
+
 app.listen(PORT, function() {
 	console.log('Server has started');
 });

@@ -9,8 +9,6 @@
         <hr class="my-4">
             If you are a current McMinn Clinic patient and would like to be a part of our new practice, please contact our front office to get started! We are at 205-868-1313.
             <p>After we get your portal set up, you will have access to all of your records, labs, and appointment notes through the Charm EHR portal link on this page.</p>
-            You can request appointments through your portal, but you will still need labwork prior to your visit for regular follow-ups.
-            <p>If you are scheduling pellets or have a separate appointment to discuss, please call the office before entering an appointment time.</p>
             <p>If you will not be joining us, and would like a copy of your medical records, please fill out <a href="https://drive.google.com/file/d/1csjjagLMLqgYNYspdgc23plvH15tjW8h/view?usp=sharing" target="_blank">this form</a> and fax it to (205) 868-1314, or email it to info@mcminnclinic.com with a subject of Records Request. We will get that to you as soon as possible.</p>
       </div>
       <div class="card col-lg-4" style="height: 16rem;">
@@ -48,30 +46,10 @@
       </div>
       <div class="card col-lg-4" style="height: 16rem;">
         <div class="card-body">
-          <h5 class="card-title">Patient Payment Plan</h5>
-          <h6 class="card-subtitle mb-2 text-muted">We have set up our payment system through PayPal</h6>
-          <p class="card-text">Click on this button in order to be linked to PayPal</p>
-
-          <div id="paypal-button-container"></div>
-            <script src="https://www.paypal.com/sdk/js?client-id=AYIKX_jqamsBTXJEPznm1TZapOfibbGpdIlMhvlorAA8Jcz4Z98W9KtkLelykgiqPQpvbWl5PYNErjUs&vault=true" data-sdk-integration-source="button-factory"></script>
-            <script>
-              paypal.Buttons({
-                style: {
-                shape: 'pill',
-                color: 'blue',
-                layout: 'vertical',
-                label: 'paypal',
-                },
-                createSubscription: function(data, actions) {
-                  return actions.subscription.create({
-                  'plan_id': 'P-3K540166KH7907446LZL64ZY'
-                  });
-                },
-                onApprove: function(data, actions) {
-                  alert(data.subscriptionID);
-                }
-              }).render('#paypal-button-container');
-            </script>
+          <h5 class="card-title">Letter About Changes</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Everything is Explained Here</h6>
+          <p class="card-text">If you have any questions about why we are downsizing, and what to expect, please read the letter below. You should have received a copy of the letter in the mail. We apologize if we missed you.</p>
+          <a href="/images/letter.pdf" target="_blank" class="card-link">New Letter</a>
         </div>
       </div>
     </div>
