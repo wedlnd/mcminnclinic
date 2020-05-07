@@ -39,6 +39,14 @@ app.get('/affiliates', function(req, res) {
 	res.render('affiliates');
 });
 
+app.get('/conditions', function(req, res) {
+	res.render('conditions');
+});
+
+app.get('/services', function(req, res) {
+	res.render('services');
+});
+
 app.listen(PORT, function() {
 	console.log('Server has started');
 });

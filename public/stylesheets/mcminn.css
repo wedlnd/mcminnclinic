@@ -45,6 +45,21 @@ ul {
 	list-style: none;
 }
 
+#gutHealth {
+	list-style-type: circle;
+	margin-left: 2em;
+}
+
+#womensHealth {
+	list-style-type: circle;
+	margin-left: 2em;
+}
+
+#vaginalHealth {
+	list-style-type: disc;
+	margin-left: 2em;
+}
+
 body {
 	font: 16px/1.5 "Oswald", sans-serif;
 	/*IE FIX*/
